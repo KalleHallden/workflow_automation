@@ -8,4 +8,4 @@ def post_to_twitter(image_path, video_title, video_link):
 	auth.set_access_token(creds["access_token"], creds["access_token_secret"])
 	api = tweepy.API(auth)
 	tweet_text = video_title + " " + video_link
-	status = api.update_with_media(image_path, tweet_text)
+	api.update_with_media(image_path, tweet_text)
