@@ -8,12 +8,16 @@ questions:
 - API?
 - Selecting images through the sites
 
-1. Post to instagram with some caption
-	- open instagram site
-	- login?
-	- post an image
+1. Scrape youtube
+	- open youtube
+	- find my channel
+	- check if new video
 
 2. Post thumbnail + link to twitter
-	- open twitter 
-	- login?
+	- API
 	- post link plus image
+
+3. Post to instagram with some caption
+	- API?
+	- post an image
+	

@@ -1,2 +1,6 @@
 
-tokens.txt
+tokens.py
+tokens.pyc
+*.png
+*.jpg
+*.jpeg
