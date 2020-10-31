@@ -12,12 +12,9 @@ questions:
 	- open youtube
 	- find my channel
 	- check if new video
-
-2. Post thumbnail + link to twitter
-	- API
-	- post link plus image
+	- download the image
+	- copy the link
 
 3. Post to instagram with some caption
 	- API?
 	- post an image
-	

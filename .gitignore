@@ -1,6 +1,8 @@
 
 tokens.py
-tokens.pyc
 *.png
 *.jpg
 *.jpeg
+*.exe
+*.pyc
+*.log
