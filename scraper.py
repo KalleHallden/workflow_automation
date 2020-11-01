@@ -20,7 +20,8 @@ with open('data.json','r') as f:
 
 if past_title == video_title:
 	print("Don't post")
-	print(f"{Last updated was {data["updated"]}}")
+	l_updated=date["last_updated"]
+	print(f"Last updated was {l_updated}")
 else: 
 	video.click()
 
