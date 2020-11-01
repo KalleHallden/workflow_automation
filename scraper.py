@@ -4,6 +4,7 @@ from selenium import webdriver
 from twitter_poster import post_to_twitter
 from selenium.webdriver.chrome.options import Options 
 import json
+import datetime
 
 chrome_options = Options()  
 chrome_options.add_argument("--headless") 
@@ -13,11 +14,14 @@ url = "https://www.youtube.com/c/KalleHallden/videos"
 browser.get(url)
 video = browser.find_element_by_xpath('//*[@id="video-title"]')
 video_title = str(video.text)
-F = open('titles.txt','r')
-past_title = F.readline()
+with open('data.json','r') as f:
+	data=json.load(f)
+	past_title = data["title"]
 
 if past_title == video_title:
 	print("Don't post")
+	l_updated=date["last_updated"]
+	print(f"Last updated was {l_updated}")
 else: 
 	video.click()
 
@@ -27,5 +31,7 @@ else:
 	thumbnail = wget.download(thumbnailurl)
 	image_path = 'maxresdefault.jpg'
 	post_to_twitter(image_path, video_title, video_url)
-	F = open('titles.txt','w')
-	F.write(video_title)
+	data["title"]=video_title
+	data["last_updated"]=str(datetime.date.today())
+	with open("data.json","w") as f:
+		json.dump(data,f)
